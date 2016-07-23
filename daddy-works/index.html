@@ -1,0 +1,528 @@
+<html>
+<head>
+
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
+<script src="jquery-1.9.1.min.js"></script>
+ <script type="text/javascript" src="ZeroClipboard.js"></script>
+    <title>panchangam</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<style type="text/css"></style>
+	<script language="JavaScript">
+    function executeCopy(text) {
+    var input = document.createElement('textarea');
+    document.body.appendChild(input);
+    input.value = text;
+    input.focus();
+    input.select();
+    document.execCommand('Copy');
+    input.remove();
+}
+
+// Copy HTML as text (without HTML tags)
+function executeCopy2(html) {
+    var doc = new DOMParser().parseFromString(html, 'text/html');
+    var text = doc.body.textContent;
+    return executeCopy(text);
+}
+        </script>
+</head>
+<body>
+  <form>
+<div class="form-group">
+	<label>Select Tamil Month: </label>
+	<input list="tamild" class="form-control" name="dateselect" id="dateselect">
+  <datalist id="tamild" >
+    <option value="CHITHIRAI/சித்திரை">
+    <option value="VAIKASI/வைகாசி">
+    <option value="AANI/ஆனி">
+    <option value="AADI/ஆடி">
+    <option value="AAVANI/ஆவணி">
+	<option value="PURATTASI/புரட்டாசி">
+	<option value="AIPASI/ஐப்பசி">
+	<option value=" KARTTHIKAI/கார்த்திகை">
+	<option value="MARGAZHI/மார்கழி ">
+	<option value="THAI/தை">
+	<option value="MASI/மாசி">
+	<option value="PANGUNI/பங்குனி">
+
+  </datalist> 
+  </div>
+<div class="form-group">
+<label>Select Tamil Date: </label>
+  <input list="tamild1" class="form-control" name="dateselect1" id="dateselect1">
+  <datalist id="tamild1">
+    <option value="1">
+    <option value="2">
+    <option value="3">
+    <option value="4">
+    <option value="5">
+	<option value="6">
+	<option value="7">
+	<option value="8">
+	<option value="9">
+	<option value="10">
+	<option value="11">
+	<option value="12">
+	<option value="13">
+    <option value="14">
+    <option value="15">
+    <option value="16">
+    <option value="17">
+	<option value="18">
+	<option value="19">
+	<option value="20">
+	<option value="21">
+	<option value="22">
+	<option value="23">
+	<option value="24">
+	<option value="25">
+    <option value="26">
+    <option value="27">
+    <option value="28">
+    <option value="29">
+	<option value="30">
+	<option value="31">
+	<option value="32">
+  </datalist> 
+</div>
+<div class="form-group">
+	 <label>Select Tamil Day: </label>
+  	<input list="tamild2" class="form-control" name="dateselect2" id="dateselect2">
+  <datalist id="tamild2">
+    <option value="MONDAY/திங்கள்">
+    <option value="TUESDAY/செவ்வாய்">
+    <option value="WEDNESDAY/புதன்">
+    <option value="THURSDAY/வியாழன்">
+    <option value="FRIDAY/வெள்ளி">
+	<option value="SATURDAY/சனி">
+	<option value="SUNDAY/ஞாயிறு">
+
+  </datalist>
+</div>
+  <div class="form-group">
+
+<textarea id="title2" class="form-control" rows="2" cols="60"  ></textarea>
+</div>
+<div class="form-group">
+        <input type="text" class="form-control" id="desc1" value="Durmuki Nama samvatsare / துர்முகி நாம  ஸம்வத்ஸரே " size="55"> 
+</div>
+<div class="form-group">
+	 <label>Select ayanam: </label>
+  	<input list="tamild3" class="form-control" name="dateselect3" id="ayanam">
+  <datalist id="tamild3">
+    <option value="Dakshinayane / தக்ஷிணாயனே">
+    <option value="Utharayane / உத்தராயனே">
+
+  </datalist>
+</div>
+<div class="form-group">
+ <label>  Select ruthou:</label> 
+  <input list="tamild4" class="form-control" name="dateselect4" id="dateselect4">
+   <datalist id="tamild4">
+    <option value="Vasantha ruthou / வசந்தருதௌ">
+    <option value="Greeshma Ruthou / கிரீஷ்ம ருதௌ">
+	    <option value="Varsha Ruthou / வர்ஷருதௌ">
+    <option value="Sarath ruthou / சரத்ருதௌ">
+	    <option value="Hemantha Ruthou / ஹேமந்த்ருதௌ">
+    <option value="Sisira Ruthou / சிசரருதௌ">
+
+  </datalist>
+</div>
+<div class="form-group">
+  <label>Select Mase: </label>
+ <input list="tamild5" class="form-control" name="dateselect5" id="dateselect5">
+   <datalist id="tamild5">
+    <option value="Mesha Mase / மேஷ  மாசம் ">
+    <option value="Vrushaba Mase / வ்ருஷப  மாசம் ">
+	    <option value="Mithuna Mase / மிதுன  மாசம் ">
+    <option value="Kataka Mase / கடக  மாசம் ">
+	    <option value="Simma Mase / சிம்ம  மாசம் ">
+	<option value="Kanya Mase / கன்யா  மாசம் ">
+    <option value="Thula Mase / துலா  மாசம் ">
+	    <option value="Vruchika Mase / வ்ருச்சிக  மாசம் ">
+    <option value="Chhaapa Mase / சாப  மாசம் ">
+	    <option value="Makara Mase / மகர மாசம் ">
+    <option value="Kumba Mase / கும்ப மாசம் ">
+	<option value="Meena Mase / மீன மாசம் ">
+  </datalist>
+  </div>
+<div class="form-group">
+   <label>Select pakshe:</label> 
+ <input list="tamild6" class="form-control" name="dateselect6" id="dateselect6">
+   <datalist id="tamild6">
+    <option value="Krishna Pakshe / க்ருஷ்ண பக்ஷம்">
+    <option value="Shukla Pakshe / சுக்ல பக்ஷம் ">
+ </datalist>
+</div>
+<div class="form-group">
+
+  <label>Select thithi: </label>
+ <input list="tamild7" class="form-control" name="dateselect7" id="dateselect7">
+   <datalist id="tamild7">
+    <option value="Pradhamai thithi / பிரதமை திதி">
+    <option value="Dweethiyai thithi / துவிதியை திதி ">
+	<option value="Thrutheeyai thithi / திருதியை திதி">
+    <option value="Chathurthi thithi / சதுர்த்தி திதி">
+	<option value="Panchami thithi / பஞ்சமி திதி">
+	<option value="Sashti thithi / ஷஷ்டி திதி">
+    <option value="Sapthami thithi / சப்தமி  திதி">
+	<option value="Ashtami  thithi / அஷ்டமி  திதி">
+    <option value="Navami thithi / நவமி திதி">
+	<option value="Dasami  thithi / தசமி  திதி">
+    <option value="Ekadasi thithi / ஏகாதசி  திதி">
+	<option value="Dwadasi thithi / துவாதசி திதி">
+	<option value="Thrayothassi thithi / திரயோதசி திதி">
+	<option value="Chathurdasi thithi / சதுர்த்தசி  திதி">
+    <option value="Pournami thithi / பொளர்ணமி  திதி">
+	<option value="Amavasyai thithi / அமாவாஸ்யை திதி ">
+  </datalist>
+</div>
+<div class="form-group">
+   <label>Enter Vasaram / வாஸரம்: </label>
+  <input list="tamild111"  class="form-control" name="dateselect111" id="dateselect111">
+	<datalist id="tamild111">
+	<option value="Bhanu Vasaram / பானு வாஸரம்">
+	<option value="Indhu Vasaram / இந்து வாஸரம்">
+ <option value="Bouma Vasaram / பௌம வாஸரம்">
+			 <option value="Soumya Vasaram/ சௌம்ய வாஸரம்">
+				 <option value="Guru Vasaram / குரு வாஸரம்">
+					 <option value="Bruhu Vasaram / ப்ருஹு வாஸரம்">
+						 <option value="Sthira Vasaram / ஸ்திர வாஸரம்">
+							 </datalist>
+</div>
+<div class="form-group">
+   <label>Select Nakashtram: </label>
+    <input list="tamild8" class="form-control" name="dateselect8" id="dateselect8">
+  <datalist id="tamild8">
+    <option value="Aswini Nakashtram / அஸ்வினி  நக்ஷத்திரம்">
+    <option value="Abhabharani Nakashtram / அபபரணி நக்ஷத்திரம்">
+    <option value="Karthigai Nakashtram / கிருத்திகை நக்ஷத்திரம்">
+    <option value="Rohini Nakashtram / ரோகிணி நக்ஷத்திரம்">
+    <option value="Mirugasheerisham Nakashtram / மிருகசீர்ஷம் நக்ஷத்திரம்">
+	<option value="Arudra Nakashtram / ஆருத்ரா நக்ஷத்திரம்">
+	<option value="Punarvasu Nakashtram / புனர்வஸு  நக்ஷத்திரம்">
+	<option value="Pushyam Nakashtram / புஷ்யம்">
+	<option value="Ashlesha Nakashtram / ஆஸ்லேஷா   நக்ஷத்திரம்">
+	<option value="Makam Nakashtram / மகம் நக்ஷத்திரம்">
+	<option value="Poorvaphalguni Nakashtram / பூர்வபல்குனி நக்ஷத்திரம்">
+	<option value="Uthraphalguni Nakashtram / உத்திரபல்குனி நக்ஷத்திரம்">
+	<option value="Hastham Nakashtram / ஹஸ்தம் நக்ஷத்திரம்">
+    <option value="Chithirai Nakashtram / சித்திரை நக்ஷத்திரம்">
+    <option value="Swaathi Nakashtram / சுவாதி நக்ஷத்திரம்">
+    <option value="Visaakam Nakashtram / விசாகம் நக்ஷத்திரம்">
+    <option value="Anuraadha Nakashtram / அனுராதா நக்ஷத்திரம்">
+	<option value="Jyeshta Nakashtram / ஜ்யேஷ்டா நக்ஷத்திரம்">
+	<option value="Moolam Nakashtram / முலம் நக்ஷத்திரம்">
+	<option value="Poorvashaada Nakashtram / பூர்வாஷாடம் நக்ஷத்திரம்">
+	<option value="Uthiraashadam Nakashtram / உத்திராஷடம் நக்ஷத்திரம்">
+	<option value="Sravanam Nakashtram / ச்ரவணம் நக்ஷத்திரம்">
+	<option value="Sravishta Nakashtram / ச்ரவிஷ்டா நக்ஷத்திரம்">
+	<option value="Sadabhishang Nakashtram / சதபிஷங் நக்ஷத்திரம்">
+	<option value="Poorvaproshtapatha Nakashtram / பூர்வப்ரோஷ்டபதா நக்ஷத்திரம்">
+    <option value="Uthiraproshtapatha Nakashtram / உத்திரப்ரோஷ்டபதா நக்ஷத்திரம்">
+    <option value="Revathi Nakashtram / ரேவதி நக்ஷத்திரம்">
+  </datalist>
+</div>
+<div class="form-group">
+   <label>Select Nalla Neram/நல்ல நேரம் :  </label>
+ <label> AM /காலை :</label> <input type="text" class="form-control" id="desc3" value=" 7:45-8:45 " size="55"><br>
+ <label> PM/மாலை  :</label> <input type="text" class="form-control" id="desc4" value=" 4.45-5.45 " size="55">
+</div>
+<div class="form-group">
+  <label>Select Yogam/யோகம் : </label> 
+ <input list="tamild9" class="form-control" name="dateselect9" id="dateselect9">
+   <datalist id="tamild9">
+    <option value="Sidha Yogam / சித்த யோகம்">
+    <option value="Amirda Yogam / அமிர்த் யோகம் ">
+	 <option value="Yogam sariyillai / யோகம் சரியில்லை ">
+ </datalist>
+</div>
+<div class="form-group">
+  <label>Select Chandrashtamam  :  </label>
+ <input list="chandval1" class="form-control" name="chand1" id="chand1">
+ <input list="chandval2" class="form-control" name="chand2" id="chand2">
+ <datalist id="chandval1">
+ 	<option value="Aswini / அஸ்வினி  ">
+ 	<option value="Abhabharani / அபபரணி ">
+ 	<option value="Karthigai  / கிருத்திகை ">
+ 	<option value="Rohini  / ரோகிணி ">
+ 	<option value="Mirugasheerisham/ மிருகசிரீஷம் ">
+ <option value="Arudra  / ஆருத்ரா ">
+ <option value="Punarvasu  / புனர்வஸு  ">
+ <option value="Pushyam  / புஷ்யம்">
+ <option value="Ashlesha  / ஆஸ்லேஷா   ">
+ <option value="Makam / மகம் ">
+ <option value="Poorvaphalguni  / பூர்வபல்குனி ">
+ <option value="Uthraphalguni / உத்திரபல்குனி ">
+ <option value="Hastham  / ஹஸ்தம் ">
+ 	<option value="Chithirai  / சித்திரை ">
+ 	<option value="Swaathi  / சுவாதி ">
+ 	<option value="Visaakam  / விசாகம் ">
+ 	<option value="Anuraadha  / அனுராதா ">
+ <option value="Jyeshta  / ஜ்யேஷ்டா ">
+ <option value="Moolam  / முலம் ">
+ <option value="Poorvashaada  / பூர்வாஷாடம் ">
+ <option value="Uthiraashadam  / உத்திராஷடம் ">
+ <option value="Sravanam  / ச்ரவணம் ">
+ <option value="Sravishta  / ச்ரவிஷ்டா ">
+ <option value="Sadabhishang  / சதபிஷங் ">
+ <option value="Poorvaproshtapatha  / பூர்வப்ரோஷ்டபதா ">
+ 	<option value="Uthiraproshtapatha  / உத்திரப்ரோஷ்டபதா ">
+ 	<option value="Revathi  / ரேவதி ">
+ </datalist>
+ <datalist id="chandval2">
+	<option value=" ">
+ 	<option value="Aswini Nakashtram / அஸ்வினி  நக்ஷத்திரம்">
+ 	<option value="Abhabharani Nakashtram / அபபரணி நக்ஷத்திரம்">
+ 	<option value="Karthigai Nakashtram / கிருத்திகை நக்ஷத்திரம்">
+ 	<option value="Rohini Nakashtram / ரோகிணி நக்ஷத்திரம்">
+ 	<option value="Mirugasheerisham Nakashtram / மிருகசிரீஷம் நக்ஷத்திரம்">
+ <option value="Arudra Nakashtram / ஆருத்ரா நக்ஷத்திரம்">
+ <option value="Punarvasu Nakashtram / புனர்வஸு  நக்ஷத்திரம்">
+ <option value="Pushyam Nakashtram / புஷ்யம்">
+ <option value="Ashlesha Nakashtram / ஆஸ்லேஷா   நக்ஷத்திரம்">
+ <option value="Makam Nakashtram / மகம் நக்ஷத்திரம்">
+ <option value="Poorvaphalguni Nakashtram / பூர்வபல்குனி நக்ஷத்திரம்">
+ <option value="Uthraphalguni Nakashtram / உத்திரபல்குனி நக்ஷத்திரம்">
+ <option value="Hastham Nakashtram / ஹஸ்தம் நக்ஷத்திரம்">
+ 	<option value="Chithirai Nakashtram / சித்திரை நக்ஷத்திரம்">
+ 	<option value="Swaathi Nakashtram / சுவாதி நக்ஷத்திரம்">
+ 	<option value="Visaakam Nakashtram / விசாகம் நக்ஷத்திரம்">
+ 	<option value="Anuraadha Nakashtram / அனுராதா நக்ஷத்திரம்">
+ <option value="Jyeshta Nakashtram / ஜ்யேஷ்டா நக்ஷத்திரம்">
+ <option value="Moolam Nakashtram / முலம் நக்ஷத்திரம்">
+ <option value="Poorvashaada Nakashtram / பூர்வாஷாடம் நக்ஷத்திரம்">
+ <option value="Uthiraashadam Nakashtram / உத்திராஷடம் நக்ஷத்திரம்">
+ <option value="Sravanam Nakashtram / ச்ரவணம் நக்ஷத்திரம்">
+ <option value="Sravishta Nakashtram / ச்ரவிஷ்டா நக்ஷத்திரம்">
+ <option value="Sadabhishang Nakashtram / சதபிஷங் நக்ஷத்திரம்">
+ <option value="Poorvaproshtapatha Nakashtram / பூர்வப்ரோஷ்டபதா நக்ஷத்திரம்">
+ 	<option value="Uthiraproshtapatha Nakashtram / உத்திரப்ரோஷ்டபதா நக்ஷத்திரம்">
+ 	<option value="Revathi Nakashtram / ரேவதி நக்ஷத்திரம்">
+ </datalist>
+</div>
+<div class="form-group">
+
+
+   <label>Sunrise / சூர்யோதயம்  : </label>
+    <input type="text" id="desc12" class="form-control" value="காலை 6.30 am" size="55">
+</div>
+<div class="form-group">
+   <label>Sunset / அஸ்தமனம்  : </label>
+	<input type="text" id="desc14" class="form-control" value="மாலை 5.50 pm" size="55">
+</div>
+<div class="form-group">
+	   <label>Additional Information  : </label>
+	<textarea id="info" rows="10" class="form-control" cols="50" form = "form1"></textarea>
+</div>
+
+<div class="form-group"><input type="button" value="Submit" class="btn btn-primary" onclick="doit();">
+</div>
+    </form>
+
+</div>
+
+    <script type="text/javascript">
+	function dateConvert(date){
+		var d = date.split("-");
+		var res = d[2];
+		if(d[1] == "1"){
+			res = res + " JANUARY " + d[0];
+		}
+		if(d[1] == "2"){
+			res = res + " FEBRUARY " + d[0];
+		}
+		if(d[1] == "3"){
+			res = res + " MARCH " + d[0];
+		}
+		if(d[1] == "4"){
+			res = res + " APRIL " + d[0];
+		}
+		if(d[1] == "5"){
+			res = res + " MAY " + d[0];
+		}
+		if(d[1] == "6"){
+			res = res + " JUNE " + d[0];
+		}
+		if(d[1] == "7"){
+			res = res + " JULY " + d[0];
+		}
+		if(d[1] == "8"){
+			res = res + " AUGUST " + d[0];
+		}
+		if(d[1] == "9"){
+			res = res + " SEPTEMBER " + d[0];
+		}
+		if(d[1] == "10"){
+			res = res + " OCTOBER " + d[0];
+		}
+		if(d[1] == "11"){
+			res = res + " NOVEMBER " + d[0];
+		}
+		if(d[1] == "12"){
+			res = res + " DECEMBER " + d[0];
+		}
+		return res;
+	}
+
+	function ragu(day){
+
+		var val ;
+
+		if(day[0] == "MONDAY"){
+			val = "7.30 - 9.00 AM";
+		}
+		if(day[0] == "TUESDAY"){
+			val = "3.00 - 4.30 PM";
+		}
+		if(day[0] == "WEDNESDAY"){
+			val = "12.00 - 1.30 PM";
+		}
+		if(day[0] == "THURSDAY"){
+			val = "1.30 - 3.00 PM";
+		}
+		if(day[0] == "FRIDAY"){
+			val = "10.30 - 12.00 NOON";
+		}
+		if(day[0] == "SATURDAY"){
+			val = "9.00 - 10.30 AM";
+		}
+		if(day[0] == "SUNDAY"){
+			val = "4.30 - 6.00 PM";
+		}
+		return val;
+	}
+
+	function yema(day){
+
+		var val ;
+
+		if(day[0] == "MONDAY"){
+			val = "10.30 - 12.00 NOON";
+		}
+		if(day[0] == "TUESDAY"){
+			val = "9.00 - 10.30 AM";
+		}
+		if(day[0] == "WEDNESDAY"){
+			val = "7.30 - 9.00 AM";
+		}
+		if(day[0] == "THURSDAY"){
+			val = "6.00 - 7.30 AM ";
+		}
+		if(day[0] == "FRIDAY"){
+			val = "3.00 - 4.30 PM";
+		}
+		if(day[0] == "SATURDAY"){
+			val = "1.30- 3.00 PM";
+		}
+		if(day[0] == "SUNDAY"){
+			val = "12.00 - 1.30 PM";
+		}
+		return val;
+	}
+
+    function doit() {
+	
+	var title2 = document.getElementById("title2").value;
+
+	var dateselect = document.getElementById("dateselect").value;
+	var dateselect1 = document.getElementById("dateselect1").value;
+	var dateselect2 = document.getElementById("dateselect2").value.split("/");
+    var desc = document.getElementById("desc1").value.split("/");
+	var dateselect3 = document.getElementById("ayanam").value.split("/");
+	var dateselect4 = document.getElementById("dateselect4").value.split("/");
+	var dateselect5 = document.getElementById("dateselect5").value.split("/");
+	var dateselect6 = document.getElementById("dateselect6").value.split("/");
+	var dateselect7 = document.getElementById("dateselect7").value.split("/");
+ var dateselect111 = document.getElementById("dateselect111").value.split("/");
+	var dateselect8 = document.getElementById("dateselect8").value.split("/");
+	var desc3 = document.getElementById("desc3").value;
+	var desc4 = document.getElementById("desc4").value;
+	var desc6 = ragu(dateselect2);
+	var desc8 = yema(dateselect2);
+	var dateselect9 = document.getElementById("dateselect9").value.split("/");
+	var chand1 = document.getElementById("chand1").value.split("/");
+	var chand2 = document.getElementById("chand2").value.split("/");
+	var desc12 = document.getElementById("desc12").value;
+	var desc14 = document.getElementById("desc14").value;
+	var info = document.getElementById("info").value;
+	var mydate=new Date()
+	var year=mydate.getYear()
+	if (year < 1000)
+	year+=1900
+	var day=mydate.getDay()
+	var month=mydate.getMonth()
+	var daym=mydate.getDate()+1;
+	if (daym<10)
+	daym="0"+daym
+	var dayarray=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
+	var montharray=new Array("January","February","March","April","May","June","July","August","September","October","November","December")
+   
+var tomorrow = new Date(Date.now() + 1000 * 3600 * 24);
+var result = tomorrow.toLocaleString('en-US', {  month: 'long', year: 'numeric', day: 'numeric' });
+
+var tom = new Date(Date.now() + 2000 * 3600 * 24);
+var res = tom.toLocaleString('en-US', { weekday: 'long', month: 'long', year: 'numeric', day: 'numeric' });
+
+document.write(
+	'<div class="copy" style="border:1px solid black; padding:20px;">'+
+'<span id="date-time">*'+ result + '*<\/span>' +
+"*" + dateselect+ "    " + dateselect1 + "*<br />"+
+"*" + dateselect2[0]+" / " + dateselect2[1]+ "*<br />"+
+ "<h1></h1>&nbsp;*EVENT OF THE DAY*&nbsp;"  +"<br />"+
+"_____________________________"+"<br>"+
+ title2 + "<br />"+
+"_____________________________"+"<br>"+
+"" + desc[0] + "<br />"+
+ dateselect3[0] + "<br />"+
+ dateselect4[0] + "<br />"+
+ dateselect5[0] + "<br />"+
+ dateselect6[0] + "<br />"+
+ dateselect7[0] + "<br />"+
+ dateselect111[0] + "<br />"+
+"" + dateselect8[0] + "<br />"+
+"_____________________________"+"<br>"+
+ desc[1] + "<br />"+
+ dateselect3[1] + "<br />"+
+ dateselect4[1] + "<br />"+
+ dateselect5[1] + "<br />"+
+ dateselect6[1] + "<br />"+
+ dateselect7[1] + "<br />"+
+ dateselect111[1] + "<br />"+
+"" + dateselect8[1] + "<br />"+
+"<h1></h1>" + "*Nalla Neram/நல்ல நேரம்*" + "<br />"+
+"" + "AM /காலை  : " + desc3 + "<br />"+
+"" + "PM/மாலை" + desc4 + "<br />"+
+"<h1></h1>" + "*Raghu Kaalam/ராகு காலம்*" + "<br />"+
+"" + desc6 + "<br />"+
+"<h1></h1>" + "*Yemakandam/எமகண்டம்*" + "<br />"+
+"" + desc8 + "<br />"+
+"<h1></h1>" + "*Yogam/யோகம்*" + "<br />"+
+"" + dateselect9[0] + "<br />"+
+"" + dateselect9[1] + "<br />"+
+"<h1></h1>" + "*Chandrashtamam*" + "<br />"+
+"" + chand1[0] + "  /   " +  chand2[0] + "<br />"+
+"" + chand1[1] + "  /  " + chand2[1] + "<br />"+
+"<h1></h1>" + "*Sunrise / சூர்யோதயம்*" + "<br />"+
+"" + desc12 + "<br />"+
+"<h1></h1>" + "*Sunset / அஸ்தமனம்*" + "<br />"+
+"" + desc14 + "<br />"
++"_____________________________"+"<br>"
++"*IMPORTANT EVENT ON:*"+"<br>"
++"*" + res + "*<br />"
++"_____________________________"+"<br>"
++"" + info + "<br />"
++"_____________________________"+"<br>"
++"" + "*Compiled By :* " + "<br />"+
+"" + "*Nagai Narasimhan*" + "<br />"+
+"" + "*நாகை ந்ருஸிம்ஹன்*" + "<br />" 
++'<div>'
+
+);
+ }
+executeCopy('<div id="copy"></div>');
+    </script>
+</body>
